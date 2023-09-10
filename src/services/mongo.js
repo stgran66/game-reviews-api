@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-const MONGO_URL =
-  'mongodb+srv://next-reviews:sVUnNvuNRDX6IXIX@cluster0.qkywbgw.mongodb.net/game-reviews?retryWrites=true&w=majority';
+const MONGO_URL = process.env.MONGO_URL;
 
 mongoose.connection.once('open', () => {
   console.log('Connected to database');
